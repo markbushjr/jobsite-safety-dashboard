@@ -3,6 +3,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
+import siteRoutes from "./routes/siteRoutes.js";
+import inspectionRoutes from "./routes/inspectionRoutes.js";
 
 dotenv.config();
 
@@ -16,10 +18,8 @@ app.get("/api/health", (req, res) => {
 });
 
 app.use("/api/auth", authRoutes);
-
-// Routes will be mounted here as they're built:
-// app.use("/api/sites", siteRoutes);
-// app.use("/api/inspections", inspectionRoutes);
+app.use("/api/sites", siteRoutes);
+app.use("/api/inspections", inspectionRoutes);
 
 const PORT = process.env.PORT || 5000;
 
