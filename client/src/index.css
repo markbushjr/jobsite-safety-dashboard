@@ -1,0 +1,93 @@
+:root {
+  /* Color tokens */
+  --color-bg: #f5f3ee;
+  --color-surface: #ffffff;
+  --color-ink: #1c2331;
+  --color-ink-soft: #5a6472;
+  --color-accent: #e85d2c;
+  --color-accent-soft: #fbe3d8;
+  --color-success: #2f855a;
+  --color-success-soft: #e3f0e9;
+  --color-warning: #c08a1e;
+  --color-warning-soft: #f7ecd6;
+  --color-danger: #c13b3b;
+  --color-danger-soft: #f8e2e2;
+  --color-border: #ddd8cc;
+
+  /* Type */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/* Visible keyboard focus everywhere, per accessibility floor */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Utility: asset-tag style monospace chip, used for site codes / IDs
+   throughout the app -- ties the UI back to real fleet/equipment tagging */
+.tag-chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 3px;
+  border: 1px solid var(--color-border);
+  color: var(--color-ink-soft);
+  background: var(--color-surface);
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
