@@ -4,8 +4,8 @@
 
 A full-stack web application for tracking weekly OSHA-style safety inspections across multiple construction jobsites. Site supervisors log inspection checklists and flag violations; admins get a live compliance dashboard across every site — compliance rate, overdue-inspection alerts, and an 8-week trend chart.
 
-**Live demo:** _add your deployed URL here once live_
-**Login:** _add demo credentials here once you have real ones you're comfortable sharing_
+**Live demo:** https://jobsite-safety-dashboard.vercel.app/login
+**Login:** jordan.reyes@example.com / casey.nguyen@example.com, password Supervisor123!
 
 ## Why this project
 
