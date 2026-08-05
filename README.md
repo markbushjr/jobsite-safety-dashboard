@@ -1,9 +1,11 @@
 # Jobsite Safety Compliance Dashboard
 
+![CI](https://github.com/markbushjr/jobsite-safety-dashboard/actions/workflows/ci.yml/badge.svg)
+
 A full-stack web application for tracking weekly OSHA-style safety inspections across multiple construction jobsites. Site supervisors log inspection checklists and flag violations; admins get a live compliance dashboard across every site — compliance rate, overdue-inspection alerts, and an 8-week trend chart.
 
-**Live demo:** https://jobsite-safety-dashboard.vercel.app/login
-**Login:** jordan.reyes@example.com / casey.nguyen@example.com, password Supervisor123!
+**Live demo:** _add your deployed URL here once live_
+**Login:** _add demo credentials here once you have real ones you're comfortable sharing_
 
 ## Why this project
 
@@ -54,6 +56,13 @@ cd client
 npm install
 npm run dev
 ```
+
+### Running tests
+```bash
+cd server
+npm test
+```
+Runs the backend test suite (Jest + Supertest) against an in-memory MongoDB instance — no real database needed. Covers auth (register/login/token validation), role-based access control on sites, and the inspection compliance-status calculation including the resolve-violation flow. Tests run automatically on every push via GitHub Actions (see the badge above).
 
 ### Seed demo data (optional)
 ```bash
